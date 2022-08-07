@@ -1,0 +1,70 @@
+setting up a new machine 
+1. first open terminal and paste "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash"
+2. Restart terminal and type nvm to confirm.
+//Set up nvm 
+1. Paste this command "nvm install --lts" check by "nvm list"
+
+Installing Ruby Environment Manager(RVM)
+1. Paste this command "sudo apt-get install software-properties-common"
+NOTE: if errors are found run "apt --fix-broken install" then try again, Its also good to do "Sudo apt update && sudo apt upgrade"
+2. Next command "sudo apt-add-repository -y ppa:rael-gc/rvm"
+3. Type sudo apt-get update && sudo apt-get install rvm
+4. Type "sudo usermod -a -G rvm $USER"
+5. Restart ubuntu then type "rvm"
+Installing Ruby version 2.7.4 on ubuntu
+Open terminal "rvm install 2.7.4 --default"
+>Check by "rvm list"
+//Incase of any problem try in terminal
+1. rvm group add rvm $USER (Close ubuntu and reopen)
+2. rvm fix-permissions
+If persistence try "sudo usermod -a -G rvm $USER"
+Installing Ruby Gems 
+1. Type "gem update --system" (Incase of an error do "sudo apt install ruby")
+2. Type "gem install bundler"
+3. Type "gem install pry"
+4. Type "gem list"
+NOTE: If you encounter an error start with sudo.
+
+Installing GIT and GITHUB
+To connect to git and github using ssh 
+1. Open terminal "sudo add-apt-repository ppa:git-core/ppa"
+2. Type "sudo apt update && sudo apt install git"
+3. Confirm if succesful by running "git --version"
+
+Setting up git
+1. type "git config --global color.ui true"
+2. type "git config --global user.name"+<space> + Your name.
+3. Type "git config --global user.email" + space + Email address registered for git
+4. Type "git config --global init.defaultBranch main" to update the default branch to main. 
+Type "ssh-Keygen" (Don't type anything press enter)
+Type "cat ~/.ssh/id_rsa.pub | clip.exe"(If command not found do
+1. sudo apt-get install -y xclip
+2. alias pbcopy="xclip -sel clip"
+3. cat~/.ssh/id_rsa.pub | pbcopy)
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCh9GOei6SpT9sanPHhJnu0dIV5ZATMQvKuL9z6j2R9MM9wd0juiHubYctrHRGjicTNWmDifYTJ57VjVmokZd/X13r7vTC4WQXH+QrvMpWCSmULuTikzwq/T4oFiWA1We+CkBFn2Nz9chHBxRg1TzWtBRL8AwkT6pNKtWlIZQITcKYpfJb356oo8z1mTMmTxBI/
+
+configuring faltiron
+1. Type " curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/wsl-phase-0-manual-setup-validator.sh | bash 2> /dev/null"
+
+If you having a challenge with rvm and nvm
+1. Type " mv ~/.bashrc{,.bak}" //Makes a backup of current .bashrc
+2. Type "curl -sSL https://raw.githubusercontent.com/flatiron-school/dotfiles/master/minimal-bashrc > ~/.bashrc" //Close and open terminal
+
+If rvm still not recogonised type
+Type sudo apt-get install software-properties-common and press <Enter>
+Type sudo -E apt-add-repository -y ppa:rael-gc/rvm and press <Enter>
+Type sudo apt-get update and press <Enter>
+Type sudo apt-get install rvm and press <Enter>
+Type source /etc/profile.d/rvm.sh and press <Enter>
+Close the "Ubuntu" application
+Reopen the "Ubuntu" application
+Type rvm and press
+if NVM not recognized type 
+"curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash"
+Close and reopen terminal
+
+
+
+
+
+
